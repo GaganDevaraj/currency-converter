@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>₹ Currency Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Image and text -->
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      Project by: Gagan Dev
+    </a>
+    <div>
+      <h1>₹ Currency Converter</h1>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-6">
+        <div class="card card-body">
+          <form onsubmit="return currencyCalculator()">
+            <div class="form-group">
+              <label for="indianRupee">Enter amount in Indian Rupeee</label>
+              <input type="number" class="form-control" id="indianRupee" name="indianRupee"
+                placeholder="Enter indian runpee">
+                <small id="inputError" class="text-danger"></small>
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate</button>
+          </form>
+          <br>
+          <div>
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Country</th>
+                  <th scope="col">Currency Type</th>
+                  <th scope="col">Currency Rate</th>
+                </tr>
+              </thead>
+              <tbody id="currencyCalculatorTable">
+                <!-- <tr>
+                  <th scope="row">1</th>
+                  <td>India</td>
+                  <td>Rupees (₹)</td>
+                  <td>₹ <span id="indianRupees"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>USA</td>
+                  <td>Dollar ($)</td>
+                  <td>$ <span id="usaDollar"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>UK</td>
+                  <td>Pounds Sterling (£) </td>
+                  <td>£ <span id="ukPounds"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Dubai</td>
+                  <td>Dirham (د.إ) </td>
+                  <td>د.إ <span id="dubai"></span></td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card card-body">
+          <div class="card-title text-primary">
+            Currency Rate in various country
+          </div>
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Country</th>
+                <th scope="col">Currency</th>
+                <th scope="col">Amount</th>
+                <th scope="col">INR</th>
+              </tr>
+            </thead>
+            <tbody id="countryList">
+              <tr>
+                <th>1</th>
+                <td>India</td>
+                <td>Rupees (₹)</td>
+                <td>₹ 1.00</td>
+                <td>₹ 1.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS file -->
+  <script src="jsFunction.js"></script>
+
+</body>
+
+</html>
